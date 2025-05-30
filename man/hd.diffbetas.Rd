@@ -2,31 +2,41 @@
 % Please edit documentation in R/hd.diffbetas.R
 \name{hd.diffbetas}
 \alias{hd.diffbetas}
-\title{Highest density interval for the difference of two beta distributions}
+\title{HD interval for the difference of two beta distributions}
 \usage{
 hd.diffbetas(c1, d1, c2, d2, rho = NULL, len = NULL, N = 1000)
 }
 \arguments{
-\item{c1}{}
+\item{c1}{First parameter of the beta distribution of the first proportion.}
 
-\item{d1}{}
+\item{d1}{Second parameter of the beta distribution of the first proportion.}
 
-\item{c2}{}
+\item{c2}{First parameter of the beta distribution of the second proportion.}
 
-\item{d2}{}
+\item{d2}{Second parameter of the beta distribution of the second proportion.}
 
-\item{rho}{}
+\item{rho}{A number in (0, 1) representing the fixed probability for the HD interval.}
 
-\item{len}{}
+\item{len}{A positive real number representing the fixed length for the HD interval.}
 
-\item{N}{}
+\item{N}{Number of replicates used in the simulation. Default is 1000.}
 }
 \value{
 Lower and upper bounds of the HD interval.
 }
 \description{
-Highest density interval for the difference of two beta distributions
+Computes the highest density interval for the difference of two beta distributions by simulation.
+}
+\note{
+For fixed probability (\code{rho}) of the HD interval the function uses \code{emp.hpd} function from \code{TeachingDemos} R package. For fixed length of the HD interval the function uses an algorithm proposed in M'Lan et al. (2006).
 }
 \examples{
-.
+hd.diffbetas(c1 = 8, d1 = 2, c2 = 2, d2 = 8, rho = 0.95)
+
+hd.diffbetas(c1 = 8, d1 = 2, c2 = 2, d2 = 8, len = 0.2)
+}
+\references{
+Guimarães da Costa, E. (2025). Bayesian Sample Size for Binomial Proportions with Applications in R. In: Awe, O.O., A. Vance, E. (eds) Practical Statistical Learning and Data Science Methods. STEAM-H: Science, Technology, Engineering, Agriculture, Mathematics & Health. Springer, Cham. \url{https://doi.org/10.1007/978-3-031-72215-8_14}
+
+M’Lan, C.E., Joseph, L., Wolfson, D.B. (2006). Bayesian sample size determination for case-control studies. Journal of the American Statistical Association, 101, 760–772.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/hd.beta.R
 \name{hd.beta}
 \alias{hd.beta}
-\title{Highest density interval for the beta distribution}
+\title{HD interval for the beta distribution}
 \usage{
 hd.beta(c, d, rho = NULL, len = NULL, N = 1000)
 }
@@ -11,16 +11,31 @@ hd.beta(c, d, rho = NULL, len = NULL, N = 1000)
 
 \item{d}{Second parameter of the beta distribution.}
 
-\item{rho}{A number in (0, 1) representing the fixed posterior probability of the HPD interval.}
+\item{rho}{A number in (0, 1) representing the fixed probability for the HD interval.}
 
-\item{len}{A positive real number representing the fixed length for the HPD interval.}
+\item{len}{A positive real number representing the fixed length for the HD interval.}
+
+\item{N}{Number of replicates used in the simulation when the length is fixed. Default is 1000.}
 }
 \value{
 Lower and upper bounds of the HD interval.
 }
 \description{
-Highest density interval for the beta distribution
+Computes the highest density interval for the beta distribution by optimization or simulation.
+}
+\note{
+For fixed probability (\code{rho}) of the HD interval the function uses \code{betaHPD}
+function from \code{pscl} R package. For fixed length of the HD interval the function uses an algorithm proposed in M'Lan et al. (2006).
 }
 \examples{
-.
+# HD interval with probability 0.95 for Beta(2, 3)
+hd.beta(c = 2, d = 3, rho = 0.95)
+
+# HD interval with length 0.3 for Beta(2, 3)
+hd.beta(c = 2, d = 3, len = 0.3)
+}
+\references{
+Guimarães da Costa, E. (2025). Bayesian Sample Size for Binomial Proportions with Applications in R. In: Awe, O.O., A. Vance, E. (eds) Practical Statistical Learning and Data Science Methods. STEAM-H: Science, Technology, Engineering, Agriculture, Mathematics & Health. Springer, Cham. \url{https://doi.org/10.1007/978-3-031-72215-8_14}
+
+M’Lan, C.E., Joseph, L., Wolfson, D.B. (2006). Bayesian sample size determination for case-control studies. Journal of the American Statistical Association, 101, 760–772.
 }

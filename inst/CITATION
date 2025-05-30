@@ -1,11 +1,13 @@
 bibentry(
-  bibtype  = "Article",
-  title    = ,
-  author   = ,
-  journal  = ,
-  year     = ,
-  volume   = ,
-  number   = ,
-  pages    = ,
-  doi      =
+  bibtype  = "InBook",
+  title    = "Bayesian Sample Size for Binomial Proportions with Applications in R",
+  author   = "Eliardo G. Costa",
+  editor   ="O. Olawale Awe, Eric A. Vance",
+  bookTitle= "Practical Statistical Learning and Data Science Methods: Case Studies from LISA 2020 Global Network, USA",
+  publisher= "Springer Nature Switzerland",
+  address  = "Cham",
+  year     = "2025",
+  pages    = "325--339",
+  chapter  = "14",
+  doi      = "10.1007/978-3-031-72215-8_14"
 )
