@@ -3,3 +3,5 @@
 export(hd.beta)
 export(hd.diffbetas)
 export(mss.bb)
+importFrom(TeachingDemos,emp.hpd)
+importFrom(pscl,betaHPD)

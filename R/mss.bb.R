@@ -15,18 +15,18 @@
 #' @note Depending on the fixed values for interval length and probability, the function may take a while to calculate the sample size. ALC tends to be faster than ACC. Since this function uses Monte Carlo simulations, the provided minimum sample sizes may vary from one call to the next. The difference is expected to decrease as the number of replicates (\code{R}) used in the Monte Carlo simulation increases. For the criterion "ALCApprox" it is used the result of Theorem 4.1 of M'Lan et al. (2008).
 #' 
 #' @references
-#' Guimarães da Costa, E. (2025). Bayesian Sample Size for Binomial Proportions with Applications in R. In: Awe, O.O., A. Vance, E. (eds) Practical Statistical Learning and Data Science Methods. STEAM-H: Science, Technology, Engineering, Agriculture, Mathematics & Health. Springer, Cham. <https://doi.org/10.1007/978-3-031-72215-8_14>
+#' Costa, E. G. (2025). Bayesian Sample Size for Binomial Proportions with Applications in R. In: Awe, O.O., A. Vance, E. (eds) Practical Statistical Learning and Data Science Methods. STEAM-H: Science, Technology, Engineering, Agriculture, Mathematics & Health. Springer, Cham. \doi{10.1007/978-3-031-72215-8_14}.
 #' 
 #' M’Lan, C.E., Joseph, L., Wolfson, D.B. (2008). Bayesian sample size determination for binomial proportions. Bayesian Analysis, 3, 269–296.
 #' 
 #' @export
 #'
 #' @examples
-#' mss.bb(crit = "ALC", c = 10, d = 2, rho = 0.9, len.max = 0.2)
+#' mss.bb(crit = "ALC", c = 10, d = 2, rho = 0.9, len.max = 0.25)
 #' 
-#' mss.bb(crit = "ALCApprox", c = 10, d = 2, rho = 0.95, len.max = 0.2)
+#' mss.bb(crit = "ALCApprox", c = 10, d = 2, rho = 0.9, len.max = 0.25)
 #' 
-#' mss.bb(crit = "ACC", c = 2, d = 10, rho.min = 0.9, len = 0.2)
+#' \dontrun{mss.bb(crit = "ACC", c = 2, d = 10, rho.min = 0.9, len = 0.25)}
 mss.bb <- function(crit, c, d, rho.min = NULL, len = NULL, rho = NULL, len.max = NULL, R = 1E3, n0 = 1) {
   message("The computation may take a while.")
   message("Computing ...", appendLF = FALSE)
