@@ -15,7 +15,7 @@
 #' @note For fixed probability (\code{rho}) of the HD interval the function uses \code{emp.hpd} function from \code{TeachingDemos} R package. For fixed length of the HD interval the function uses an algorithm proposed in M'Lan et al. (2006).
 #' 
 #' @references 
-#' Guimarães da Costa, E. (2025). Bayesian Sample Size for Binomial Proportions with Applications in R. In: Awe, O.O., A. Vance, E. (eds) Practical Statistical Learning and Data Science Methods. STEAM-H: Science, Technology, Engineering, Agriculture, Mathematics & Health. Springer, Cham. \doi{10.1007/978-3-031-72215-8_14}.
+#' Costa, E. G. (2025). Bayesian Sample Size for Binomial Proportions with Applications in R. In: Awe, O.O., A. Vance, E. (eds) Practical Statistical Learning and Data Science Methods. STEAM-H: Science, Technology, Engineering, Agriculture, Mathematics & Health. Springer, Cham. \doi{10.1007/978-3-031-72215-8_14}.
 #' 
 #' M’Lan, C.E., Joseph, L., Wolfson, D.B. (2006). Bayesian sample size determination for case-control studies. Journal of the American Statistical Association, 101, 760–772.
 #' 
