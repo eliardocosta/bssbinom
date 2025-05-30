@@ -1,18 +1,14 @@
 Package: bssbinom
-Title: Bayesian sample size for binomial proportions
+Title: Bayesian Sample Size for Binomial Proportions
 Version: 1.0.0
 Authors@R: 
     person("Eliardo", "Costa", , "eliardo.costa@ufrn.br", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-4528-0379"))
 Description: Computation of the minimum sample size using ACC or ALC
     criteria for estimating binomial proportions using beta prior
-    distributions.
+    distributions. For more details see Costa (2025)
+    <DOI:10.1007/978-3-031-72215-8_14>
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Imports: 
-    pscl,
-    TeachingDemos
-URL: https://github.com/eliardocosta/bssbinom
-BugReports: https://github.com/eliardocosta/bssbinom/issues
