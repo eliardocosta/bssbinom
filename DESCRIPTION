@@ -14,3 +14,5 @@ RoxygenNote: 7.3.2
 Imports: 
     pscl,
     TeachingDemos
+URL: https://github.com/eliardocosta/bssbinom
+BugReports: https://github.com/eliardocosta/bssbinom/issues
